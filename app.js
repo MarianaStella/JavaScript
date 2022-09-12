@@ -1,21 +1,29 @@
-let zapatillas = 25000;
-let mochila = 14000;
-
-function calculadora (zapatillas, mochila, operacion){
-    switch (operacion){
-        case "+":
-            return zapatillas + mochila;
-            break;
-        case "-":
-            return zapatillas - mochila;
-            break;
-        default:
-            return 0;
-            break;
+class Paciente {
+    constructor (nombre, cobertura, edad) {
+    this.nombre = nombre;
+    this.cobertura = cobertura;
+    this.edad = edad;
     }
 }
 
-console.log(calculadora(zapatillas, mochila, "+"));
+const asistenHoy = [];
+const paciente1 = new Paciente ("Maria Sandoval", "OSDE", 32);
+const paciente2 = new Paciente ("Raul Pereira", "OSDE", 24);
+const paciente3 = new Paciente ("Laura Etchevez", "OSDE",41);
+
+console.log(paciente1, paciente2, paciente3);
+
+asistenHoy.push(paciente1);
+asistenHoy.push(paciente2);
+asistenHoy.push(paciente3);
+asistenHoy.reverse(paciente1);
+asistenHoy.reverse(paciente2);
+asistenHoy.reverse(paciente3);
+
+console.log(asistenHoy);
 
 
-// Utilicé una función con el ciclo Switch para sumar o restar la compra de unas zapatillas y mochila. 
+
+// HICE UNA CLASE CON LA LISTA DE LOS PACIENTES QUE ASISTEN EN EL 
+// DÍA DE HOY CON SU RESPECTIVA INFORMACIÓN, Y LUEGO HICE UN 
+// REVERSE PARA QUE INVIERTA EL ORDEN DE LLEGADA DE LOS PACIENTES. 
