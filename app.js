@@ -50,20 +50,39 @@
 // ENTREGA COMPLEMENTARIA: DOM
 
 
-let medicos = [
-    { id: 1, nombre: "Carlos Perez", especialidad: "Clínica Médica"},
-    { id: 2, nombre: "Maria Sandoval", especiliadad: "Cardiólogía"},
-    { id: 3, nombre: "Santiago Menotti", especialidad: "Traumatología"},
-];
+// let medicos = [
+//     { id: 1, nombre: "Carlos Perez", especialidad: "Clínica Médica"},
+//     { id: 2, nombre: "Maria Sandoval", especiliadad: "Cardiólogía"},
+//     { id: 3, nombre: "Santiago Menotti", especialidad: "Traumatología"},
+// ];
 
-for (medico of medicos){
-    let contenedor = document.createElement ("div");
-    contenedor.innerHTML = `<h3>Medico: ${medico.nombre}</h3>
-    <p>Especialidad: ${medico.especialidad}</p>`;
-    document.body.appendChild(contenedor);
-}
+// for (medico of medicos){
+//     let contenedor = document.createElement ("div");
+//     contenedor.innerHTML = `<h3>Medico: ${medico.nombre}</h3>
+//     <p>Especialidad: ${medico.especialidad}</p>`;
+//     document.body.appendChild(contenedor);
+// }
 
 
 // AGREGUÉ UN ARRAY DE OBJETOS CON LOS NOMBRES Y ESPECIALIDADES DE LOS MÉDICOS, 
 // CON UN CICLO FOR RECORRÍ CADA ELEMENTO DE LOS MEDICOS, CREANDO UN CONTENEDOR
 // DIV PARA INSERTARLO LUEGO EN MI HTML.
+
+
+
+// ENTREGA: INCORPORANDO EVENTOS
+
+
+let form = document.getElementById("formulario");
+let nombre = document.getElementById("formNombre");
+let email = document.getElementById("formEmail");
+let cobertura = document.getElementById("formCobertura");
+let edad = document.getElementById("formEdad");
+
+formulario.addEventListener("submit", validarFormulario);
+
+function validarFormulario(e){
+    e.preventDefault();
+    let formulario = e.target
+    console.log(`${nombre.value} ${email.value} ${cobertura.value} ${edad.value}`)
+} 
